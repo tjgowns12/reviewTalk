@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 </script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Review talk aaaaaaaaaaaaaaaaaaaaaa</title>
 </head>
 <body>
 <c:import url="header.jsp"/>
