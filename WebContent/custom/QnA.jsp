@@ -17,12 +17,12 @@ nav .mylist{order:1;list-style: none;}
 .span{padding-right:300px; }
 .section{padding-top: 60px; }
 #wrap{width: 1000px; margin: 0 auto; padding-top: 100px;display: flex;}
-
+.sp{text-align: right;}
 </style>
 </head>
 <body>
 <c:import url="../base/header.jsp"/>
-<div id="wrap">
+<div id="wrap" style="padding-bottom: 300px;">
 
 <nav class="na" style="float: left; padding-right: 50px;" >
 <ul class="mylist">
@@ -35,29 +35,30 @@ nav .mylist{order:1;list-style: none;}
 
 
 <section class="section">
-<h1>공 지 사 항</h1>
-<hr>
-<p>
+<h1>1 : 1 문의</h1>
+<p>가입을 하신 분들은 로그인을 하시고 다시 와 주기시 바랍니다.</p>
+<p>개인정보 보호를 위해 문의 답변 후 1주일이 지난 질문은 삭제됩니다.</p>
+<form>
 <table>
-<td><span class="span">No.</span></td>
-<td><span class="span">제목</span></td>
-<td><span>등록일</span></td>
+<tr>
+<td><input type="text" name="id" placeholder="임시 아이디"></td>
+<td><input type="text" name="pwd" placeholder="임시 비밀번호"></td>
+<td><input type="button" value="검색" style="width: 150px;background-color: skyblue;"></td>
+<td><input type="submit" value="등록" style="width: 150px;background-color: lightgray;"></td>
+<tr>
 </table>
-</p>
+</form>
 <hr>
-<!--내용  -->
 <div>
-내용
-
-
+<div style="float: left;">No.&nbsp;&nbsp;&nbsp;</div>
+<div style="float: left;">문의 제목</div>
+<div style="text-align: right;">등록일</div>
 </div>
-<!-- 내용 -->
-<div align="right"style="margin-bottom: 300px;">
-<br>
 <hr>
-<input type="button" value="등록하기" style="background-color: skyblue;border-radius:10px;outline: 0;"> 
-</div>
 </section>
+
+
+
 
 </div>
 <c:import url="../base/footer.jsp"/>

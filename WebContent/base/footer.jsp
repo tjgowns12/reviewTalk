@@ -7,7 +7,7 @@
 <title>footer.jsp</title>
 </head>
 <body>
-	<footer align="center" style="width: 1000px; margin: ">
+	<footer align="center" style="width: 1000px; margin: 0 auto; ">
 		<hr style="width: 950px;">
 		<h1>CONTACT</h1>
 		<b>information</b><br>

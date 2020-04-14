@@ -4,11 +4,11 @@
 <html>
 <head>
 <style type="text/css">
-	.nav{float: right;}
-	.nav li{ float:left; list-style: none; margin:1px; padding-right: 30px;}
-	.nav li a:link { color:black; text-decoration: none;}
-	.nav li a:visited { color: black; text-decoration: none;}
-	.nav li a:hover { color: blue; text-decoration: none;}
+   .nav{float: right;}
+   .nav li{ float:left; list-style: none; margin:1px; padding-right: 30px;}
+   .nav li a:link { color:black; text-decoration: none;}
+   .nav li a:visited { color: black; text-decoration: none;}
+   .nav li a:hover { color: blue; text-decoration: none;}
 </style>
 <meta charset="UTF-8">
 <title>header</title>
@@ -25,10 +25,8 @@
 					<li><a href="#"> 회원가입</a></li>
 				</ul>
 			</nav>
+			<hr>
 		</header>
-
-		<hr>
-
 	</div>
 </body>
 </html>
