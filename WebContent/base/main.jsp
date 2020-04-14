@@ -25,6 +25,13 @@ $(document).ready(function(){
 </head>
 <body>
 <c:import url="header.jsp"/>
+<table align="center">
+<tr>
+<td><input type="text" placeholder="브랜드 제품명으로 검색" style="border-radius:10px; width: 300px;height: 20px;" ></td>
+<td><a href="#"><img src="../research.png"></a></td>
+</tr>
+</table>
+
 <div style="width: 900px; margin: 0 auto;">
 <div class="slider" align="center">
 <div><img src="../ex01.png" style="width: 800px;"></div>
