@@ -21,29 +21,38 @@ $(document).ready(function(){
 
 </script>
 <meta charset="UTF-8">
-<title>Review talk aaaaaaaaaaaaaaaaaaaaaa</title>
+<title>Review talk</title>
 </head>
 <body>
-<c:import url="header.jsp"/>
-<div style="width: 900px; margin: 0 auto;">
-<div class="slider" align="center">
-<div><img src="../ex01.png" style="width: 800px;"></div>
-<div><img src="../ex02.png" style="width: 800px;"> </div>
-</div>
-</div>
-<table align="center">
-<tr>
-<td><img src="../sales1.png"></td><td><img src="../sales1.png"></td><td><img src="../sales1.png"></td>
-</tr>
+	<c:import url="header.jsp" />
+	
+	<table align="center" margin>
+		<tr>
+			<td><input type="text" placeholder="브랜드 제품명으로 검색"
+				style="border-radius: 10px; width: 300px; height: 20px;"></td>
+			<td><a href="#"><img src="../research.png"></a></td>
+		</tr>
+	</table>
+	
+	<div style="width: 900px; margin: 0 auto;">
+		<div class="slider" align="center">
+			<div>
+				<img src="../ex01.png" style="width: 800px;">
+			</div>
+			<div>
+				<img src="../ex02.png" style="width: 800px;">
+			</div>
+		</div>
+	</div>
+	
+	<table align="center">
+		<tr>
+			<td><img src="../sales1.png"></td>
+			<td><img src="../sales1.png"></td>
+			<td><img src="../sales1.png"></td>
+		</tr>
+	</table>
 
-
-
-</table>
-
-
-
-
-
-<c:import url="footer.jsp"/>
+	<c:import url="footer.jsp" />
 </body>
 </html>
