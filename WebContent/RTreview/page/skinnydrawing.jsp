@@ -15,6 +15,7 @@
 
 </head>
 <body>
+<jsp:include page="/base/header.jsp"/>
 <div align="center">
 <div class="d2">
 <img src="/reviewTalk/RTreview/image/sample1.jpg">
@@ -34,6 +35,9 @@
 <hr>
 <div>
 
+
+<input type="button" value="글 등록" onclick="location.href='/reviewTalk/RTreview/comment/insertReview.jsp'">
+<jsp:include page="/base/footer.jsp"/>
 </div>
 </body>
 </html>
