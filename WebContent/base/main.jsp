@@ -22,6 +22,7 @@
 	});
 </script>
 <meta charset="UTF-8">
+
 <title>Review talk</title>
 </head>
 <body>
@@ -55,5 +56,6 @@
 	</table>
 	
 	<c:import url="footer.jsp"/>
+
 </body>
 </html>
