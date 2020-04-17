@@ -8,6 +8,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+function chk(){
+	var title=document.getElementById("title1").value
+	var content=document.getElementById("content1").value
+	
+	if(title==""){
+		alert("제목 입력")
+	}else if(content==""){
+		alert("내용 입력")
+	}else if(title!=""&&content!=""){
+		fo.submit();	
+	}
+
+	
+}
+
+</script>
+
+
+
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/site.css">
 <style type="text/css">
@@ -39,37 +59,30 @@ nav .mylist{order:1;list-style: none;}
 <h1 style="font-weight: 1">1 : 1 문의</h1>
 <p>가입을 하신 분들은 로그인을 하시고 다시 와 주기시 바랍니다.</p>
 <p>개인정보 보호를 위해 문의 답변 후 1주일이 지난 질문은 삭제됩니다.</p>
-<script type="text/javascript">
-function sub(){
-	
-	
-	fo.submit();
-	alert("문의 완료")
-}
 
-
-</script>
-<form action="#" id="fo">
+<form action="write_save.jsp" id="fo" method="get">
 <table>
 <tr>
 <td><font size="2em" color="yellow;">*</font><font size="4em">문의제목&nbsp;</font></td>
-<td><input type="text" style="width: 600px; height: 25px;" placeholder="제목을 입력해주세요."></td>
+<td><input type="text" id="title1" name="title" style="width: 600px; height: 25px;" placeholder="제목을 입력해주세요."></td>
 </tr>
 </table>
 <hr color= "black;">
 <table>
 <tr>
 <td><font size="2em" color="yellow;">*</font><font size="4em">문의 내용</font></td>
-<td><textarea style="width: 600px; height: 400px;"></textarea></td>
+<td><textarea id="content1" name="content" style="width: 600px; height: 400px;"></textarea></td>
 </tr>
+
 <tr>
 <td></td>
-<td align="center"><button type="button"  onclick="#" class="btn btn-warning btn-sm">문의 접수</button></td>
+<td align="center"><input type="button"  onclick="chk()" class="btn btn-warning btn-sm" value="문의접수"></td>
 </tr>
 </table>
 </form>
 </section>
 </div>
+
 
 <c:import url="../base/footer.jsp"/>
 

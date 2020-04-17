@@ -17,6 +17,8 @@ nav .mylist{order:1;list-style: none;}
 .na li a:link { color:black; text-decoration: none;}
 .na li a:visited { color: black; text-decoration: none;}
 .na li a:hover { color: blue; text-decoration: none;}
+a:link{color:black; text-decoration: none;}
+a:hover{color: blue; text-decoration: none;}
 .span{padding-right:300px; }
 .section{padding-top: 60px;}
 #wrap{width: 1000px; margin: 0 auto; padding-top: 100px;display: flex;}
@@ -49,33 +51,82 @@ nav .mylist{order:1;list-style: none;}
 <td><input type="button" onclick="location.href='write_view.jsp'" value="등록" style="width: 150px;height:30px;background-color: lightgray;"class="btn btn-default pull-right"></td>
 <tr>
 </table>
+
+
 </form>
 <hr>
 <div>
 <table class="table table-hover">
+<jsp:useBean id="dao" class="review.customDAO"/>
+<c:set var="totalPage" value="${dao.getTotalPage() }"/>
 <thead>
 <tr>
 <th>No.</th><td>제목</td><td>등록일</td><td>아이디</td>
 </tr>
 </thead>
 <tbody>
+<c:choose>
+<c:when test="${listDto.size()!=0 }">
+<c:set var="listDto" value="${dao.list(param.start) }"/>
+<c:forEach var="dt" items="${listDto }">
 <tr>
-<td >1</td><td>땡땡이 궁금합니다~~~~~~.</td><td>2020-04-16</td><td></td>
+<td>${dt.customNum }</td>
+<td><a href="#">${dt.title }</a></td>
+<td>${dt.savedate }</td>
+<td>${dt.writer }</td>
 </tr>
+</c:forEach>
+</c:when>
+<c:otherwise>
 <tr>
-<td>2</td><td>회원가입 하는 법~!!!</td><td>2020-04-14</td><td></td>
-
+<th colspan="4">등록된 정보가 없습니다.</th>
 </tr>
+</c:otherwise>
+</c:choose>
 </tbody>
-
 </table>
+<c:choose>
+		<c:when test="${param.start==null }">
+		<c:set var="start" value="1"/>
+		</c:when>
+		<c:otherwise>
+		<c:set var="start" value="${param.start }"/>
+		</c:otherwise>
+</c:choose>
+
+<div class="text-center">
+<ul class="pagination">
+<c:choose>
+		<c:when test="${start>1 }">
+		<li><a href="QnA.jsp?start=${start-1 }" >이전</a></li>
+		</c:when>
+		<c:otherwise>
+		<li><a href="QnA.jsp?start=${start}" >이전</a></li>
+		</c:otherwise>
+</c:choose>
+
+<c:forEach begin="1" end="${totalPage }" step="1" var="cnt">
+<li><a href="QnA.jsp?start=${cnt }">${cnt }</a></li>
+</c:forEach>
+<c:choose>
+		<c:when test="${start<totalPage }">
+		
+		<li><a href="QnA.jsp?start=${start+1 }" >다음</a></li>
+		</c:when>
+		<c:otherwise>
+		<li><a href="QnA.jsp?start=${start}" >다음</a></li>	
+		</c:otherwise>
+</c:choose>
 
 
+
+
+</ul>
+</div>
 
 
 
 </div>
-
 </section>
 
 </div>
