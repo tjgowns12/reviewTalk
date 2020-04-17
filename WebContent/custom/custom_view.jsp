@@ -55,8 +55,11 @@ a:hover { color: blue; text-decoration: none;}
 </tr>
 <tr>
 <td>2</td><td><a href="#">Bootstrap 강좌 입니다</a></td><td>2020-04-14</td>
-
 </tr>
+
+
+
+
 </tbody>
 
 </table>
