@@ -9,13 +9,13 @@
 </head>
 <body>
 
-<div align="center">
+<div align="center" style="padding-bottom: 100px;">
 <h1>리뷰 작성</h1>
-<div style="width: 300px; height:300px; text-align: left; padding-top: 100px;">
-<form action="" method="get" enctype="multipart/form-data">
+<div style="width: 300px; height:200px; text-align: left;">
+<form action="insertReviewCon.jsp" method="post" enctype="multipart/form-data">
 
 
-<textarea rows="20" cols="30" name="content" placeholder="리뷰할 내용을 이곳에 "></textarea><br><br>
+<textarea rows="10" cols="40" name="content" placeholder="리뷰할 내용을 이곳에 "></textarea><br><br>
 <input type="file" name="file"><br><br>
 <input type="submit" value="업로드">
 
